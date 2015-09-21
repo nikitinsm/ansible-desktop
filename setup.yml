@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  connection: local
+  sudo: yes
+
+  vars_files:
+    - variables.yml
+
+  tasks:
+    - include: tasks/base/oracle_java8.yml tags=base
+
+#- hosts: localhost
+#  connection: local
+#  sudo: no
+#
+#  vars_files:
+#    - variables.yml
+#
+#  tasks:
+#    - include: tasks/dev/intellij_idea.yml tags=dev

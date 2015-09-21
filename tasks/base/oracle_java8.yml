@@ -1,0 +1,23 @@
+---
+
+- name: Install WebUpd8 apt key
+  apt_key: id=EEA14886 keyserver='keyserver.ubuntu.com' state=present
+
+- name: Install WebUpd8 Team Java PPA (for Oracle Java)
+  apt_repository: repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main' state=present
+
+#- name: Remove WebUpd8 Team Java PPA (for Oracle Java)
+#  apt_repository: repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main' state=present
+#  when: java_cleanup and not java_needs_oracle
+
+- name: Accept Oracle License
+  debconf: name=oracle-java8-installer question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+  with_items:
+    - oracle-java8-installer
+
+- name: Install Java packages
+  apt: pkg=oracle-java8-installer state=latest
+
+#- name: Remove unwanted Java packages
+#  apt: pkg=oracle-java8-installer state=absent
+#  with_items: java_packages_to_remove
