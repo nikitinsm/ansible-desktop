@@ -21,7 +21,7 @@ sudo echo "localhost ansible_connection=local" > /etc/ansible/hosts
 
 # Prepare repository
 sudo mkdir -p /opt/nikitinsm/ && cd /opt/nikitinsm/
-sudo chown -R $current_user:current_user ./
+sudo chown -R $current_user:$current_user ./
 git clone https://github.com/nikitinsm/ansible-desktop.git && cd ansible-desktop
 
 # Setup via Ansible
