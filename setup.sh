@@ -15,11 +15,11 @@ sudo apt-get install -y git python-pip python-dev openssh-server libyaml-cpp-dev
 sudo pip install -U pip ansible
 
 # Configure ansible inventory
-#if ! test -d /etc/ansible; then 
-#    sudo mkdir /etc/ansible
-#fi
-#sudo chmod 777 /etc/ansible
-#sudo echo "localhost ansible_connection=local" > /etc/ansible/hosts
+if ! test -d /etc/ansible; then 
+    sudo mkdir /etc/ansible
+fi
+sudo chmod 777 /etc/ansible
+sudo echo "localhost ansible_connection=local" > /etc/ansible/hosts
 
 # Prepare repository
 if ! test -d /opt/nikitinsm; then 
@@ -37,4 +37,4 @@ else
 fi
 
 # Setup via Ansible
-ansible-playbook setup.yml --connection=local
+ansible-playbook setup.yml
