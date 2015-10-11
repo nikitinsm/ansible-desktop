@@ -27,7 +27,14 @@ if ! test -d /opt/nikitinsm; then
 fi
 cd /opt/nikitinsm/
 sudo chown -R $current_user:$current_user ./
-git clone https://github.com/nikitinsm/ansible-desktop.git && cd ansible-desktop
+
+if ! test -d /opt/nikitinsm/ansible-desktop; then 
+    git clone https://github.com/nikitinsm/ansible-desktop.git
+    cd ./ansible-desktop
+else
+    cd /opt/nikitinsm/ansible-desktop
+    git pull
+fi
 
 # Setup via Ansible
 sudo ansible-playbook setup.yml
