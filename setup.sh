@@ -11,7 +11,7 @@ fi
 
 # Install git and Ansible
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install -y git python-pip python-dev openssh-server git
+sudo apt-get install -y git python-pip python-dev openssh-server libyaml-cpp-dev
 sudo pip install -U pip ansible
 
 # Configure ansible inventory
