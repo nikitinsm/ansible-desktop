@@ -5,9 +5,9 @@ set -e
 current_user=$USER
 
 # Install sudo
-if ! test -x /usr/bin/sudo; then 
-    su -c "apt-get install -y sudo && echo '$current_user ALL=(ALL) ALL' > /etc/sudoers.d/$current_user"
-fi
+#if ! test -x /usr/bin/sudo; then 
+su -c "apt-get install -y sudo && echo '$current_user ALL=(ALL) ALL' > /etc/sudoers.d/$current_user"
+#fi
 
 # Install git and Ansible
 sudo apt-get update && sudo apt-get upgrade -y
