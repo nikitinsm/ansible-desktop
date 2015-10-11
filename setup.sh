@@ -10,7 +10,7 @@ if ! test -x /usr/bin/sudo; then
 fi
 
 # Install git and Ansible
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install -y git python-pip python-dev openssh-server git
 sudo pip install -U pip ansible
 
