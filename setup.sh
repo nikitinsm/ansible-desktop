@@ -37,4 +37,4 @@ else
 fi
 
 # Setup via Ansible
-ansible-playbook setup.yml
+ansible-playbook setup.yml --connection=local
