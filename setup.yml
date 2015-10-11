@@ -16,4 +16,5 @@
     - variables.yml
   
   sudo: no
+  tasks:
     - include: tasks/dev/intellij_idea.yml
