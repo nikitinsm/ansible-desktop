@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 127.0.0.1
   connection: local
   remote_user: root
   sudo: yes
@@ -10,7 +10,7 @@
   tasks:
     - include: tasks/base/oracle_java8.yml
 
-- hosts: localhost
+- hosts: 127.0.0.1
   connection: local
   remote_user: sergey
   
