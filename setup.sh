@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
 set -e
-
 current_user=$USER
 
 # Install git and Ansible
