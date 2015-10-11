@@ -1,8 +1,11 @@
 
 ---
 
-- name: Install HTML parser
-  apt: pkg=xml-twig-tools state=latest
+- name: Remove HTML parser
+  apt: pkg=xml-twig-tools state=removed
 
-- name: Remove xpath
-  apt: pkg=libxml-xpath-perl state=removed
+- name: Install Tidy
+  apt: pkg=tidy
+
+- name: Install xpath
+  apt: pkg=libxml-xpath-perl state=latest
