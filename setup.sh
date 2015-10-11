@@ -15,6 +15,7 @@ sudo apt-get install -y git python-pip python-dev openssh-server libyaml-cpp-dev
 sudo pip install -U pip ansible
 
 # Configure ansible inventory
+sudo mkdir /etc/ansible
 sudo chmod 777 /etc/ansible
 sudo echo "localhost ansible_connection=local" > /etc/ansible/hosts
 
