@@ -8,4 +8,12 @@
 
   tasks:
     - include: tasks/base/oracle_java8.yml
+
+- hosts: localhost
+  connection: local
+  
+  vars_files:
+    - variables.yml
+  
+  sudo: no
     - include: tasks/dev/intellij_idea.yml
