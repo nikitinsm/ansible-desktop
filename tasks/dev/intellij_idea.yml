@@ -1,0 +1,5 @@
+
+---
+
+- name: Install xpath
+  apt: pkg=libxml-xpath-perl state=latest
