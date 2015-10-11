@@ -7,7 +7,7 @@
 #  apt: pkg=libxml2-utils state=latest
 
 - name: Download IntelliJ IDEA 14.1.5
-  get_url: url=https://download.jetbrains.com/idea/ideaIU-14.1.5.tar.gz dest=~/ checksum=sha256:6912902ec97a57f5553247367d6dd5b8e3041e99faf32c48b672cd31413dab73
+  get_url: url=https://download.jetbrains.com/idea/ideaIU-14.1.5.tar.gz dest=~/
 
 - name: Create Jetbrains dir
   file: path=~/jetbrains state=directory mode=0755
