@@ -1,5 +1,8 @@
 
 ---
 
-- name: Install xpath
-  apt: pkg=libxml-xpath-perl state=latest
+- name: Install HTML parser
+  apt: pkg=xml-twig-tools state=latest
+
+- name: Remove xpath
+  apt: pkg=libxml-xpath-perl state=removed
