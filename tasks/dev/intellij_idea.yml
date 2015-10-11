@@ -10,4 +10,4 @@
 #  get_url: url=https://download.jetbrains.com/idea/ideaIU-14.1.5.tar.gz dest=~/ checksum=sha256:6912902ec97a57f5553247367d6dd5b8e3041e99faf32c48b672cd31413dab73
 
 - name: Download and Install IntelliJ IDEA
-  unarchive: src=https://download.jetbrains.com/idea/ideaIU-14.1.5.tar.gz dest=~/jetbrains
+  unarchive: src=https://download.jetbrains.com/idea/ideaIU-14.1.5.tar.gz dest=~/jetbrains copy=no
