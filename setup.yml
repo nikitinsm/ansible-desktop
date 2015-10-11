@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   connection: local
+  remote_user: root
   sudo: yes
 
   vars_files:
@@ -11,6 +12,7 @@
 
 - hosts: localhost
   connection: local
+  remote_user: sergey
   
   vars_files:
     - variables.yml
