@@ -11,13 +11,17 @@ fi
 
 # Install git and Ansible
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install -y git python-pip python-dev openssh-server
+sudo apt-get install -y git python-pip python-dev openssh-server git
 sudo pip install -U pip ansible
 
 # Configure ansible inventory
 sudo chmod 777 /etc/ansible
 sudo echo "localhost ansible_connection=local" > /etc/ansible/hosts
-# sudo chmod -R 777 /etc/ansible
+
+# Prepare repository
+sudo mkdir -p /opt/nikitinsm/ && cd /opt/nikitinsm/
+sudo chown -R $current_user:current_user ./
+git clone https://github.com/nikitinsm/ansible-desktop.git && cd ansible-desktop
 
 # Setup via Ansible
 sudo ansible-playbook setup.yml
